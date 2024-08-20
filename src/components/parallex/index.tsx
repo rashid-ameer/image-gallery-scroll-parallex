@@ -1,13 +1,7 @@
 "use client";
 import styles from "@/components/parallex/style.module.scss";
 import useDimension from "@/hooks/use-dimension";
-import {
-  MotionValue,
-  useScroll,
-  useTransform,
-  motion,
-  useVelocity,
-} from "framer-motion";
+import { MotionValue, useScroll, useTransform, motion } from "framer-motion";
 import Image from "next/image";
 import { useRef } from "react";
 
@@ -36,7 +30,6 @@ function ScrollParallex() {
 
   const y1 = useTransform(scrollYProgress, [0, 1], [0, height * 2]);
   const y2 = useTransform(scrollYProgress, [0, 1], [0, height * 3.6]);
-  const v = useVelocity(y2);
   const y3 = useTransform(scrollYProgress, [0, 1], [0, height * 1.25]);
   const y4 = useTransform(scrollYProgress, [0, 1], [0, height * 3]);
 

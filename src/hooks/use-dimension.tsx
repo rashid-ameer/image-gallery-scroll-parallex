@@ -7,6 +7,7 @@ export default function useDimension() {
     function resize() {
       const width = window.innerWidth;
       const height = window.innerHeight;
+      console.log(width, height);
 
       setDimension({ width, height });
     }
